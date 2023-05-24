@@ -47,7 +47,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Algorithm\Algorithm\Algorithm.csproj">
+    <ProjectReference Include="..\Algorithm\Algorithm.csproj">
       <Project>{32898DDB-69EA-44E5-B15C-A1C4EC928DB9}</Project>
       <Name>Algorithm</Name>
     </ProjectReference>

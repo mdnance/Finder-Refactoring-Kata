@@ -19,7 +19,7 @@ namespace Algorithm.Test
         }
 
         [Fact]
-        public void Returns_Empty_Results_When_Given_One_Person()
+        public void Returns_Empty_Results_When_Given_One_FT()
         {
             var list = new List<Thing>() { sue };
             var finder = new Finder(list);
@@ -31,7 +31,7 @@ namespace Algorithm.Test
         }
 
         [Fact]
-        public void Returns_Closest_Two_For_Two_People()
+        public void Returns_One_Two_For_Two_FTs()
         {
             var list = new List<Thing>() { sue, greg };
             var finder = new Finder(list);
@@ -43,7 +43,7 @@ namespace Algorithm.Test
         }
 
         [Fact]
-        public void Returns_Furthest_Two_For_Two_People()
+        public void Returns_Two_Two_For_Two_FTs()
         {
             var list = new List<Thing>() { greg, mike };
             var finder = new Finder(list);
@@ -55,7 +55,7 @@ namespace Algorithm.Test
         }
 
         [Fact]
-        public void Returns_Furthest_Two_For_Four_People()
+        public void Returns_Two_Two_For_Four_FTs()
         {
             var list = new List<Thing>() { greg, mike, sarah, sue };
             var finder = new Finder(list);
@@ -67,7 +67,7 @@ namespace Algorithm.Test
         }
 
         [Fact]
-        public void Returns_Closest_Two_For_Four_People()
+        public void Returns_One_Two_For_Four_FTs()
         {
             var list = new List<Thing>() { greg, mike, sarah, sue };
             var finder = new Finder(list);
