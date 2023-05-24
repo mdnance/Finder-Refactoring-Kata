@@ -1,5 +1,5 @@
-const { FT } = require('../src/ft.js');
 const { Finder } = require('../src/finder.js');
+const { FT } = require('../src/ft.js');
 const { Thing } = require('../src/thing.js');
 
 describe('Finder', () => {
@@ -9,12 +9,15 @@ describe('Finder', () => {
         sue = new Thing();
         sue.name = "Sue";
         sue.birthDate = new Date(50, 0, 1);
+
         greg = new Thing();
         greg.name = "Greg";
         greg.birthDate = new Date(52, 5, 1);
+
         sarah = new Thing();
         sarah.name = "Sarah";
         sarah.birthDate = new Date(82, 0, 1);
+
         mike = new Thing();
         mike.name = "Mike";
         mike.birthDate = new Date(79, 0, 1);
@@ -34,6 +37,7 @@ describe('Finder', () => {
         const finder = new Finder(list);
 
         const result = finder.find(FT.One);
+
         expect(result.P1).toBeNull();
         expect(result.P2).toBeNull();
     });
@@ -43,6 +47,7 @@ describe('Finder', () => {
         const finder = new Finder(list);
 
         const result = finder.find(FT.One);
+
         expect(result.P1).toBe(sue);
         expect(result.P2).toBe(greg);
     });
@@ -52,6 +57,7 @@ describe('Finder', () => {
         const finder = new Finder(list);
 
         const result = finder.find(FT.Two);
+
         expect(result.P1).toBe(greg);
         expect(result.P2).toBe(mike);
     });
@@ -61,6 +67,7 @@ describe('Finder', () => {
         const finder = new Finder(list);
 
         const result = finder.find(FT.Two);
+
         expect(result.P1).toBe(sue);
         expect(result.P2).toBe(sarah);
     });
@@ -70,6 +77,7 @@ describe('Finder', () => {
         const finder = new Finder(list);
 
         const result = finder.find(FT.One);
+
         expect(result.P1).toBe(sue);
         expect(result.P2).toBe(greg);
     });
