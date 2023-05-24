@@ -1,0 +1,18 @@
+.DS_Store
+
+# NPM
+node_modules/
+npm-debug.log
+package-lock.json
+coverage/
+.nyc_output/
+
+# Eclipse
+.project
+.settings
+.classpath
+
+# IDEA
+.idea
+*.iml
+*.iwr
