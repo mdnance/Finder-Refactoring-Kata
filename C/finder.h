@@ -16,8 +16,12 @@ typedef struct
     List *_p;
 } Finder;
 
+void initializeList(List *list, int size);
+void destroyList(List *list);
+
 Finder *createFinder(List *p);
 void destroyFinder(Finder *finder);
+
 F *find(Finder *finder, FT ft);
 
 #endif /* FINDER_H */
