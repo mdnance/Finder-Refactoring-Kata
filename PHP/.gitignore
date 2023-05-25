@@ -1,1 +1,17 @@
+composer.bat
+composer.phar
 vendor/
+
+# PHP Storm
+.idea
+*.iml
+*.iwr
+
+# Eclipse files
+.project
+.buildpath
+.settings
+
+# PHPUnit
+coverage
+.phpunit.result.cache

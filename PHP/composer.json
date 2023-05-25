@@ -1,5 +1,5 @@
 {
-    "name": "codelytv/incomprehensible-finder-refactoring",
+    "name": "codelytv/algorithm-refactoring",
     "description": "Incomprehensible Finder Refactoring Kata created by K. Scott Allen. PHP translation by CodelyTV.",
     "type": "project",
     "require": {
@@ -7,8 +7,7 @@
     },
     "require-dev": {
         "symfony/var-dumper": "^3.1",
-        "phpunit/phpunit": "^5.5",
-        "jakub-onderka/php-parallel-lint": "^0.9"
+        "phpunit/phpunit": "^5.5"
     },
     "minimum-stability": "stable",
     "prefer-stable": true,
@@ -27,7 +26,6 @@
     },
     "scripts": {
         "test": [
-            "parallel-lint . --exclude vendor",
             "phpunit --configuration phpunit.xml"
         ]
     }

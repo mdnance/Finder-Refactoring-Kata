@@ -55,7 +55,7 @@ final class FinderTest extends TestCase
     }
 
     /** @test */
-    public function should_return_empty_when_given_one_person()
+    public function should_return_empty_when_given_one_ft()
     {
         $list   = [];
         $list[] = $this->sue;
@@ -68,7 +68,7 @@ final class FinderTest extends TestCase
     }
 
     /** @test */
-    public function should_return_closest_two_for_two_people()
+    public function should_return_one_two_for_two_fts()
     {
         $list   = [];
         $list[] = $this->sue;
@@ -82,7 +82,7 @@ final class FinderTest extends TestCase
     }
 
     /** @test */
-    public function should_return_furthest_two_for_two_people()
+    public function should_return_two_two_for_two_fts()
     {
         $list   = [];
         $list[] = $this->mike;
@@ -96,7 +96,7 @@ final class FinderTest extends TestCase
     }
 
     /** @test */
-    public function should_return_furthest_two_for_four_people()
+    public function should_return_two_two_for_four_fts()
     {
         $list   = [];
         $list[] = $this->sue;
@@ -114,7 +114,7 @@ final class FinderTest extends TestCase
     /**
      * @test
      */
-    public function should_return_closest_two_for_four_people()
+    public function should_return_one_two_for_four_fts()
     {
         $list   = [];
         $list[] = $this->sue;
