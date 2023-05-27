@@ -1,3 +1,5 @@
+# Introduction
+
 Here is the bad news: the new developer you hired has written some terrible, atrocious code. 
 No one can understand what it does.
 
