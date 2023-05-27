@@ -4,7 +4,6 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Algorithm</RootNamespace>
     <AssemblyName>Algorithm</AssemblyName>
   </PropertyGroup>
