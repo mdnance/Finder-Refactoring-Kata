@@ -1,8 +1,10 @@
-with Ada.Containers.Vectors;
-with Ada.Calendar;
-
 package body Finder is
-    use Ada.Calendar; -- for < in line 18 and 25
+
+    function Make_Thing(Name : String; Year : Year_Number; Month : Month_Number; Day : Day_Number) return Thing is
+    begin
+        return Thing' (Name      => Name_String.To_Bounded_String (Name),
+                       BirthDate => Time_Of (Year, Month, Day));
+    end Make_Thing;
 
     package Tr_Vectors is new Ada.Containers.Vectors (Index_Type => Natural, Element_Type => F);
 
@@ -29,16 +31,9 @@ package body Finder is
         end loop;
 
         if Tr.Last_Index = Tr_Vectors.No_Index then
-            Answer :=
-               (P1 =>
-                   Thing'
-                      (Name      => Name_String.To_Bounded_String (""),
-                       BirthDate => Ada.Calendar.Clock),
-                P2 =>
-                   Thing'
-                      (Name      => Name_String.To_Bounded_String (""),
-                       BirthDate => Ada.Calendar.Clock),
-                D  => 0);
+            Answer := (P1 => Make_Thing("", 1901, 1, 1),
+                       P2 => Make_Thing("", 1901, 1, 1),
+                       D  => 0);
         else
             Answer := Tr (1);
             for Result of Tr loop
