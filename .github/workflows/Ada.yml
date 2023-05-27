@@ -1,0 +1,31 @@
+name: Test Ada
+
+on:
+  push:
+    paths:
+      - 'Ada/**'
+      - '.github/workflows/Ada.yml'
+  pull_request:
+    paths:
+      - 'Ada/**'
+      - '.github/workflows/Ada.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v3
+
+    - name: Set up Ada
+      run: >
+        sudo apt-get update &&
+        sudo apt-get install gnat gprbuild aunit
+
+    - name: Build
+      working-directory: Ada
+      run: gprbuild -p -gnatef algorithm.gpr
+
+    - name: Test
+      working-directory: Ada
+      run: ./obj/run_tests
