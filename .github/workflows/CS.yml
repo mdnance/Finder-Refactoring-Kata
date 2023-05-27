@@ -1,0 +1,35 @@
+name: Test CS
+
+on:
+  push:
+    paths:
+      - 'CS/**'
+      - '.github/workflows/CS.yml'
+  pull_request:
+    paths:
+      - 'CS/**'
+      - '.github/workflows/CS.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.0.x
+
+    - name: Set up dependencies
+      working-directory: CS
+      run: dotnet restore
+
+    - name: Build
+      working-directory: CS
+      run: dotnet build --no-restore
+
+    - name: Test
+      working-directory: CS
+      run: dotnet test --no-build --verbosity normal
