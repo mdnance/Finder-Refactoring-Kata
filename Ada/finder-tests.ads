@@ -9,4 +9,6 @@ package Finder.Tests is
 
    function Name (T : Finder_Test) return Message_String;
 
+   procedure Set_Up_Case (T : in out Finder_Test);
+
 end Finder.Tests;

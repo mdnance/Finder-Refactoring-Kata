@@ -9,6 +9,14 @@ package body Finder.Tests is
    Sarah : Thing;
    Mike  : Thing;
 
+   procedure Set_Up_Case (T : in out Finder_Test) is
+   begin
+       Sue := Make_Thing("Sue", 1950, 1, 1);
+       Greg := Make_Thing("Greg", 1952, 6, 1);
+       Sarah := Make_Thing("Sarah", 1982, 1, 1);
+       Mike := Make_Thing("Mike", 1979, 1, 1);      
+   end Set_Up_Case;
+
    -- helper Assert for Things
    procedure Assert
      (Actual, Expected : Thing; --
