@@ -1,8 +1,9 @@
-with Ada.Calendar; use Ada.Calendar;
+with Ada.Calendar;
 with Ada.Containers.Vectors;
 with Ada.Strings.Bounded;
 
 package Finder is
+   use Ada.Calendar;
 
    package Name_String is new Ada.Strings.Bounded.Generic_Bounded_Length (Max => 20);
 

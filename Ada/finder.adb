@@ -35,7 +35,7 @@ package body Finder is
                        P2 => Make_Thing("", 1901, 1, 1),
                        D  => 0);
         else
-            Answer := Tr (1);
+            Answer := Tr (Tr.First_Index);
             for Result of Tr loop
                 case FT is
                     when One =>
