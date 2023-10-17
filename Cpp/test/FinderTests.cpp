@@ -10,8 +10,8 @@ TEST_CASE("returns_Empty_Results_When_Given_Empty_List")
 
     F result = finder.Find(FT::One);
 
-    CHECK_EQ(Thing(), result.P1);
-    CHECK_EQ(Thing(), result.P2);
+    CHECK(NULL == (long)result.P1);
+    CHECK(NULL == (long)result.P2);
 }
 
 TEST_CASE("returns_Empty_Results_When_Given_One_FT")
@@ -23,8 +23,8 @@ TEST_CASE("returns_Empty_Results_When_Given_One_FT")
 
     F result = finder.Find(FT::One);
 
-    CHECK_EQ(Thing(), result.P1);
-    CHECK_EQ(Thing(), result.P2);
+    CHECK(NULL == (long)result.P1);
+    CHECK(NULL == (long)result.P2);
 }
 TEST_CASE("returns_One_Two_For_Two_FTs")
 {
@@ -35,8 +35,8 @@ TEST_CASE("returns_One_Two_For_Two_FTs")
 
     F result = finder.Find(FT::One);
 
-    CHECK_EQ(sue, result.P1);
-    CHECK_EQ(greg, result.P2);
+    CHECK_EQ(sue, *result.P1);
+    CHECK_EQ(greg, *result.P2);
 }
 
 TEST_CASE("returns_Two_Two_For_Two_FTs")
@@ -48,8 +48,8 @@ TEST_CASE("returns_Two_Two_For_Two_FTs")
 
     F result = finder.Find(FT::Two);
 
-    CHECK_EQ(greg, result.P1);
-    CHECK_EQ(mike, result.P2);
+    CHECK_EQ(greg, *result.P1);
+    CHECK_EQ(mike, *result.P2);
 }
 
 TEST_CASE("returns_Two_Two_For_Four_FTs")
@@ -63,8 +63,8 @@ TEST_CASE("returns_Two_Two_For_Four_FTs")
 
     F result = finder.Find(FT::Two);
 
-    CHECK_EQ(sue, result.P1);
-    CHECK_EQ(sarah, result.P2);
+    CHECK_EQ(sue, *result.P1);
+    CHECK_EQ(sarah, *result.P2);
 }
 
 TEST_CASE("returns_One_Two_For_Four_FTs")
@@ -78,6 +78,6 @@ TEST_CASE("returns_One_Two_For_Four_FTs")
 
     F result = finder.Find(FT::One);
 
-    CHECK_EQ(sue, result.P1);
-    CHECK_EQ(greg, result.P2);
+    CHECK_EQ(sue, *result.P1);
+    CHECK_EQ(greg, *result.P2);
 }

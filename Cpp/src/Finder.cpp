@@ -13,15 +13,15 @@ F Finder::Find(FT ft)
             F r;
             if (_p[i].birthDate < _p[j].birthDate)
             {
-                r.P1 = _p[i];
-                r.P2 = _p[j];
+                r.P1 = new Thing(_p[i]);
+                r.P2 = new Thing(_p[j]);
             }
             else
             {
-                r.P1 = _p[j];
-                r.P2 = _p[i];
+                r.P1 = new Thing(_p[j]);
+                r.P2 = new Thing(_p[i]);
             }
-            r.D = std::chrono::sys_days(r.P2.birthDate) - std::chrono::sys_days(r.P1.birthDate);
+            r.D = std::chrono::sys_days(r.P2->birthDate) - std::chrono::sys_days(r.P1->birthDate);
             tr.push_back(r);
         }
     }
