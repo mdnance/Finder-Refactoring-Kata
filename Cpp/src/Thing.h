@@ -18,5 +18,5 @@ public:
 
 inline bool operator==(const Thing &lhs, const Thing &rhs)
 {
-    return lhs.name==rhs.name && lhs.birthDate==rhs.birthDate;
+    return lhs.name == rhs.name && lhs.birthDate == rhs.birthDate;
 }

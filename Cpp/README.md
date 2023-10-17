@@ -1,6 +1,6 @@
 # Introduction
 
-Here is the bad news: the new developer you hired has written some terrible, atrocious code. 
+Here is the bad news: the new developer you hired has written some terrible, atrocious code.
 No one can understand what it does.
 
 The good news: at least there are unit tests to prove the code is working.
@@ -15,7 +15,7 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 ## Goal
 
-The primary goal is to refactor the code in `algorithm/Finder.cpp` - as it stands the code is incomprehensible.
+The primary goal is to refactor the code in `src/Finder.cpp` - as it stands the code is incomprehensible.
 
 ## Tips
 
