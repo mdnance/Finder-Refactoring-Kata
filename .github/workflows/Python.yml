@@ -1,0 +1,27 @@
+name: Test Python
+
+on:
+  push:
+    paths:
+      - 'Python/**'
+      - '.github/workflows/Python.yml'
+  pull_request:
+    paths:
+      - 'Python/**'
+      - '.github/workflows/Python.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out the repo
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Test
+      working-directory: Python
+      run: python src/finder_tests.py
