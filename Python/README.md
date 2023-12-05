@@ -9,16 +9,15 @@ You job is to refactor the code and make it readable, while keeping the code in 
 
 ## How To Start
 
-1. Build the docker container which contains all the required dependencies with `make build`
-2. Run the tests with `make test`
+1. Run the tests with `python Python/src/finder_tests.py`
 
-3. Run the tests to make sure everything works.
+2. Run the tests to make sure everything works.
 
-4. Start refactoring!
+3. Start refactoring!
 
 ## Goal
   
-The primary goal is to refactor the code in `src/Algorithm/Finder.php` - as it stands the code is incomprehensible.
+The primary goal is to refactor the code in `src/algorithm/finder.py` - as it stands the code is incomprehensible.
 
 ## Tips
 
@@ -26,7 +25,7 @@ The primary goal is to refactor the code in `src/Algorithm/Finder.php` - as it s
 
 - Move on to extract methods and making the code more modular.
 
-- See if you can also eliminate switch statements and multiple exit points from methods.
+- See if you can also eliminate multiple exit points from methods.
 
 Anything is fair game, create new classes, new methods, and rename tests.
 The only restriction is that the existing tests have to keep working.
