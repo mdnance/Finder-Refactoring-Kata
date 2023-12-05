@@ -24,4 +24,4 @@ jobs:
 
     - name: Test
       working-directory: Python
-      run: python Python/src/finder_tests.py
+      run: python src/finder_tests.py
