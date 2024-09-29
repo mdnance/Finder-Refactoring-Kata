@@ -13,14 +13,16 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      VSTEST_CONNECTION_TIMEOUT: 180000
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
 
     - name: Setup .NET
-      uses: actions/setup-dotnet@v1
+      uses: actions/setup-dotnet@v4.0.1
       with:
-        dotnet-version: 3.0.x
+        dotnet-version: 8.0.x
 
     - name: Set up dependencies
       working-directory: CS
@@ -32,4 +34,4 @@ jobs:
 
     - name: Test
       working-directory: CS
-      run: dotnet test --no-build --verbosity normal
+      run: dotnet test --no-build --verbosity normal --diag log.txt
